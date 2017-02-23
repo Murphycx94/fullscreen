@@ -5,19 +5,18 @@
 
 ###引用：  
 
-```<script src="jquery-1.11.3.min.js" type="text/javascript"></script>```  
-
- ```<script src="js/fullscreen.js" type="text/javascript"></script>```  
+```<script src="jquery-1.11.3.min.js" type="text/javascript"></script>  
+<script src="js/fullscreen.js" type="text/javascript"></script>```  
  
 ###html:  
 
-```<div id="fullscreen">  
+`<div id="fullscreen">  
 <div>第一页</div>  
 <div>第二页</div>  
 <div>第三页</div>  
 <div>第四页</div>  
 <div>第五页</div>  
-</div>```
+</div>`
 ###script：  
 
 ```$("#fullscreen").fullscreen()```
