@@ -1,7 +1,8 @@
 # fullscreen
 fullscree插件：一款基于Jquery超小的制作全屏网站插件，兼容手机端。
 使用方法：
-引用：`<script src="jquery-1.11.3.min.js" type="text/javascript"></script>`
+引用：
+`<script src="jquery-1.11.3.min.js" type="text/javascript"></script>`
  `<script src="js/fullscreen.js" type="text/javascript"></script>`
 html:
 `<div id="fullscreen">
