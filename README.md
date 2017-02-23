@@ -1,5 +1,5 @@
 # fullscreen
-##fullscree插件：一款基于Jquery超小的制作全屏网站插件，兼容手机端。  
+##fullscreen插件：一款基于Jquery超小的制作全屏网站插件，支持手机端触摸滑动。  
   使用方法：
 ```css
 body{
