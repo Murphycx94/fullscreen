@@ -13,10 +13,15 @@
   <script src="js/fullscreen.js" type="text/javascript" charset="UTF-8"></script>
 ```
 ```html
-  <div id="fullscreen">
-			<div>第一页</div>
-			<div>第二页</div>
-			<div>第三页</div>
-			<div>第四页</div>
-		</div>
+<div id="fullscreen">
+	<div>第一页</div>
+	<div>第二页</div>
+	<div>第三页</div>
+	<div>第四页</div>
+</div>
+```
+```javascript
+	<script>
+		$("#fullscreen").fullscreen();
+	</script>
 ```
