@@ -5,16 +5,16 @@
  */
 
 (function($) {
-	$.fn.fullscreen = function() {		
+	$.fn.fullscreen = function() {
 		var $parent = this;
-		var $children=this.children();
+		var $children = this.children();
 		var fullScreen = {
 			h: 0,
 			size: 0,
 			index: 0,
 			time: 700,
 			parent: $parent,
-			children:$children,
+			children: $children,
 			init: function() {
 				this.size = this.children.size();
 				this.h = $(window).height();
@@ -31,10 +31,10 @@
 			listenWindow: function() { //监听窗口变化
 				$(window).resize(() => {
 					this.h = $(window).height();
-					this.setHight();					
+					this.setHight();
 				})
 			},
-			checkScroll: function() {//监听滚轮
+			checkScroll: function() { //监听滚轮
 				var couldRun = true;
 				var scrollFunc = function(e) {
 					if(couldRun) {
@@ -83,7 +83,13 @@
 				var endX = endY = 0;
 				//touchstart
 				function touchStartFunc(e) {
-					e.preventDefault(); //阻止触摸时浏览器的缩放、滚动条滚动等  
+					if(event.cancelable) {
+						// 判断默认行为是否已经被禁用
+						if(!event.defaultPrevented) {
+							event.preventDefault();
+						}
+					}
+					//e.preventDefault(); //阻止触摸时浏览器的缩放、滚动条滚动等  
 					var touch = e.targetTouches[0]; //获取第一个触点  
 					var x = Number(touch.pageX); //页面触点X坐标  
 					var y = Number(touch.pageY); //页面触点Y坐标  
@@ -92,7 +98,13 @@
 				}
 				//touchend事件 
 				function touchEndFunc(e) {
-					e.preventDefault(); //阻止触摸时浏览器的缩放、滚动条滚动等  
+					if(event.cancelable) {
+						// 判断默认行为是否已经被禁用
+						if(!event.defaultPrevented) {
+							event.preventDefault();
+						}
+					}
+					//e.preventDefault(); //阻止触摸时浏览器的缩放、滚动条滚动等  
 					var touch = e.changedTouches[0]; //获取第一个触点  
 					var x = touch.pageX; //页面触点X坐标	  
 					var y = Number(touch.pageY); //页面触点Y坐标  
