@@ -80,8 +80,8 @@
 					let touch = e.changedTouches[0] //获取第一个触点
 					endX = touch.pageX //页面触点X坐标
 					endY = Number(touch.pageY) //页面触点Y坐标
-					if(startY - endY > 50 && this.index < this.size - 1) this.index++ //向下翻页
-					if(startY - endY < -50 && this.index > 0) this.index-- 						//向上翻页
+					if (startY - endY > 50 && this.index < this.size - 1) this.index++ //向下翻页
+					if (startY - endY < -50 && this.index > 0) this.index-- 						//向上翻页
 					this.parent.css({ transform: `translateY(-${this.index * this.h}px)` })
 				}
 				document.addEventListener("touchstart", touchStartFunc, false)
